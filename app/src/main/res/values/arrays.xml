@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activities">
+        <item>Running</item>
+        <item>Programming</item>
+        <item>Meditation</item>
+        <item>Studying</item>
+        <item>Studying PAA</item>
+        <item>Writing</item>
+        <item>E-Mails</item>
+        <item>Gym</item>
+        <item>Swimming</item>
+        <item>Eating</item>
+        <item>Sleeping</item>
+        <item>Nap</item>
+        <item>Gaming</item>
+    </string-array>
+
+
+
+
+</resources>

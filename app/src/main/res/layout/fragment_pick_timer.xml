@@ -1,0 +1,63 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.stasbar.knowyourself.fragments.PickTimeCounterFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context="com.stasbar.knowyourself.fragments.PickTimeCounterFragment">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:onClick="@{(view) -> fragment.startTimeCounter(view)}"
+                android:id="@+id/progress_bar_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/ic_tab_timer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_timer" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:onClick="@{(view) -> fragment.startTimeCounter(view)}"
+                android:id="@+id/progress_bar_stopwatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/ic_tab_stopwatch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_stopwatch" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

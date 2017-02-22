@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.stasbar.knowyourself">
+
+    <application
+        android:name="com.stasbar.knowyourself.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/BaseActivityTheme">
+        <activity
+            android:name="com.stasbar.knowyourself.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/BaseActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name=".alarms.AlarmStateManager"
+            android:exported="false" />
+
+        <service
+            android:name=".alarms.AlarmService"
+            android:exported="false" />
+        <!-- Legacy broadcast receiver that honors old scheduled timers across app upgrade. -->
+        <receiver android:name=".timer.TimerReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="times_up" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".timer.TimerService"
+            android:description="@string/timer_service_desc"
+            android:exported="false"
+            tools:ignore="ManifestResource" />
+
+        <service
+            android:name=".stopwatch.StopwatchService"
+            android:description="@string/stopwatch_service_desc"
+            android:exported="false"
+            tools:ignore="ManifestResource" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="feelings_positive">
+        <item>OPEN</item>
+        <item>understanding</item>
+        <item>confident</item>
+        <item>reliable</item>
+        <item>easy</item>
+        <item>amazed</item>
+        <item>free</item>
+        <item>sympathetic</item>
+        <item>interested</item>
+        <item>satisfied</item>
+        <item>receptive</item>
+        <item>accepting</item>
+        <item>kind</item>
+
+        <item>HAPPY</item>
+        <item>great</item>
+        <item>gay</item>
+        <item>joyous</item>
+        <item>lucky</item>
+        <item>fortunate</item>
+        <item>delighted</item>
+        <item>overjoyed</item>
+        <item>gleeful</item>
+        <item>thankful</item>
+        <item>important</item>
+        <item>festive</item>
+        <item>ecstatic</item>
+        <item>satisfied</item>
+        <item>glad</item>
+        <item>cheerful</item>
+        <item>sunny</item>
+        <item>merry</item>
+        <item>elated</item>
+        <item>jubilant</item>
+
+
+        <item>ALIVE</item>
+        <item>playful</item>
+        <item>courageous</item>
+        <item>Flow</item>
+
+        <item>GOOD</item>
+        <item>LOVE</item>
+        <item>INTERESTED</item>
+        <item>POSITIVE</item>
+        <item>STRONG</item>
+
+    </string-array>
+
+    <string-array name="feelings_negative">
+        <item>ANGRY;-100</item>
+        <item>DEPRESSED;-200</item>
+        <item>CONFUSED;-300</item>
+        <item>HELPLESS;-400</item>
+        <item>INDIFFERENT;-500</item>
+        <item>AFRAID;-600</item>
+        <item>HURT;-700</item>
+        <item>SAD;-800</item>
+
+    </string-array>
+</resources>

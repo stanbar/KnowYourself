@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="fragment"
+            type="com.stasbar.knowyourself.fragments.FeelingsFragment"/>
+    </data>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text_how_do_you_feel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/text_view_how_do_you_feel"
+        android:imeActionId="0x00000006"
+        android:imeActionLabel="Add"
+        android:imeOptions="actionDone"
+        android:inputType="textCapSentences">
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:onClick="@{() -> fragment.onAddFeelingClick()}"
+        android:id="@+id/button_add_feeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@id/edit_text_how_do_you_feel"
+        app:srcCompat="@drawable/ic_add" />
+
+    <Button
+        android:id="@+id/feelings_positive"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/feelings_all"
+        android:layout_toStartOf="@+id/feelings_all"
+        android:text="@string/positive" />
+
+    <Button
+        android:id="@+id/feelings_all"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_text_how_do_you_feel"
+        android:layout_centerHorizontal="true"
+        android:text="All" />
+
+    <Button
+        android:id="@+id/feelings_negative"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/feelings_all"
+        android:layout_toEndOf="@id/feelings_all"
+        android:text="@string/negative" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_feelings"
+        android:name="com.stasbar.lifetimetracker.FeelingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/feelings_all"
+        android:layout_above="@+id/button_done"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="com.stasbar.knowyourself.fragments.FeelingsFragment"
+        tools:listitem="@layout/fragment_feeling" />
+
+    <Button
+        android:id="@+id/button_done"
+        android:onClick="@{() ->fragment.onDoneClick()}"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:text="@string/done_label" />
+</RelativeLayout>
+</layout>
